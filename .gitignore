@@ -1,4 +1,5 @@
 config
+storage/*
 
 # Logs
 logs
