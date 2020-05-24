@@ -20,8 +20,9 @@ const ProfileCache            = MatrixBotSdk.ProfileCache;
 const RichConsoleLogger       = MatrixBotSdk.RichConsoleLogger;
 const AutojoinRoomsMixin      = MatrixBotSdk.AutojoinRoomsMixin;
 
-const config = require("../config/config.js").config;
-const matrixConfig = require("../config/config.js").matrixConfig;
+const config = require("../config/config.json");
+const matrixConfig = require("../config/matrixConfig.json");
+
 const CommandHandler = require("../commandHandler.js").CommandHandler;
 const MessageQueue = require("./messageQueue.js").MessageQueue;
 

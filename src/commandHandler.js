@@ -11,7 +11,7 @@
 
 const EventEmitter = require("events");
 
-const config = require("./config/config.js").config;
+const config = require("./config/config.json");
 
 const AboutCommand = require("./commands/about.js").AboutCommand;
 const HelpCommand = require("./commands/help.js").HelpCommand;

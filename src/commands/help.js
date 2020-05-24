@@ -5,8 +5,9 @@
  *
  */
 
+const config = require("../config/config.json");
+
 const CommandInterface = require("./commandPrototype.js").CommandInterface;
-const config = require("../config/config.js").config;
 
 class HelpCommand extends CommandInterface
 {

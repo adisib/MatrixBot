@@ -1,0 +1,5 @@
+{
+	"botName": "MyBot",
+	"botType": "Matrix",
+	"commandPrefix": "!mybot"
+}

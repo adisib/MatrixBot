@@ -4,7 +4,7 @@
  *
  */
 
-let config = require("./config/config.js").config;
+let config = require("./config/config.json");
 let MatrixBot = require("./matrix/matrixBot.js").MatrixBot;
 
 const bots = {
