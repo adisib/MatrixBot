@@ -15,6 +15,7 @@ const config = require("./config/config.json");
 
 const AboutCommand = require("./commands/about.js").AboutCommand;
 const HelpCommand = require("./commands/help.js").HelpCommand;
+const RemindCommand = require("./commands/reminder.js").RemindCommand;
 const RollCommand = require("./commands/roll.js").RollCommand;
 const TriviaCommand = require("./commands/trivia.js").TriviaCommand;
 
@@ -53,6 +54,7 @@ class CommandHandler
 			"test":   this.m_builtinActions["test"],
 			"about":  new AboutCommand(),
 			"help":   new HelpCommand(),
+			"remind": new RemindCommand(),
 			"roll":   new RollCommand(),
 			"trivia": new TriviaCommand()
 		}
@@ -83,6 +85,11 @@ class CommandHandler
 
 			let args = commandString.slice(this.commandPrefix.length).trim().split(/\s+/);
 			let command = args.splice(0, 1)[0].toLowerCase();
+
+			if (this.m_actions[command] === undefined)
+			{
+				return `${command} is not a command.`;
+			}
 			response = this.m_actions[command].exec(args, this.messageNotifier);
 
 			return response;
